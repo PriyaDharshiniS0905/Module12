@@ -1,0 +1,68 @@
+# Write a C program for menu driven calculator using switch statement.
+
+## 🎯 Aim
+
+To perform arithmetic operations using switch statement.
+---
+
+## 🧠 Algorithm
+
+1.**Start**
+2.**Read two numbers**
+3.**Display menu**
+4.**Read choice**
+5.**Perform operation using switch:**
+-Addition
+-Subtraction
+-Multiplication
+-Division
+6.**Display result**
+7.**Stop**
+---
+## Program
+~~~
+#include <stdio.h>
+
+int main() {
+    int choice;
+    float a, b;
+
+    printf("Enter two numbers: ");
+    scanf("%f %f", &a, &b);
+
+    printf("1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\n");
+    printf("Enter choice: ");
+    scanf("%d", &choice);
+
+    switch(choice) {
+        case 1:
+            printf("Result = %.2f", a + b);
+            break;
+
+        case 2:
+            printf("Result = %.2f", a - b);
+            break;
+
+        case 3:
+            printf("Result = %.2f", a * b);
+            break;
+
+        case 4:
+            if (b != 0)
+                printf("Result = %.2f", a / b);
+            else
+                printf("Division by zero not allowed");
+            break;
+
+        default:
+            printf("Invalid choice");
+    }
+
+    return 0;
+}
+
+~~~
+## Output
+
+## Result
+Thus the program has been executed successfully.
