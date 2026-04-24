@@ -1,0 +1,58 @@
+#Write a  C program to check whether the given year is leap year or not by adding century leap year or non-century leap year in the output (Eg: 2000 is a century leap year, 2024 is a non-century leap year)
+
+## 🎯 Aim
+
+To write a Python program that implements a **stack**.  
+The program allows inserting 3 elements from the user and then prints the **top element** of the stack.
+
+---
+
+## 🧠 Algorithm
+
+1. **Start the program.**
+2. **Initialize** an empty list called `stack` to simulate the stack.
+3. **If year % 100 == 0
+
+-If year % 400 == 0 → Century leap year.
+-Else → Century non-leap year**
+4.**Else
+
+-If year % 4 == 0 → Non-century leap year
+-Else → Non-century non-leap year ** 
+5. **Print** the top element.
+6. **End the program.**
+
+---
+
+## 💻 Program
+~~~c
+#include <stdio.h>
+
+int main() {
+    int year;
+
+    printf("Enter a year: ");
+    scanf("%d", &year);
+
+    if (year % 100 == 0) {
+        if (year % 400 == 0)
+            printf("%d is a century leap year", year);
+        else
+            printf("%d is a century non-leap year", year);
+    } else {
+        if (year % 4 == 0)
+            printf("%d is a non-century leap year", year);
+        else
+            printf("%d is a non-century non-leap year", year);
+    }
+
+    return 0;
+}
+
+~~~
+
+## Output
+![Screenshot 2025-05-23 121006](https://github.com/user-attachments/assets/91f87ebb-5eae-401d-98bb-88808927093a)
+
+## Result
+Thus the program has been executed successfully.
