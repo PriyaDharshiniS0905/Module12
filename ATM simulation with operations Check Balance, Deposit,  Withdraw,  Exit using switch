@@ -1,0 +1,72 @@
+# # Write a  C program for simple ATM simulation with operations Check Balance, Deposit,  Withdraw,  Exit using switch and update balance accordingly.
+
+
+## 🎯 Aim
+
+**To simulate ATM operations using switch statement.**
+
+## 🧠 Algorithm
+
+1.**Start**
+2.**Initialize balance**
+3.**Display menu**
+4.**Read choice**
+5.**Use switch:**
+-Case 1: Display balance
+-Case 2: Deposit amount
+-Case 3: Withdraw (check balance)
+-Case 4: Exit
+5.**Repeat until exit**
+6.**Stop**
+
+## 📝 Program
+~~~
+#include <stdio.h>
+
+int main() {
+    int choice;
+    float balance = 1000, amount;
+
+    do {
+        printf("\n1.Check Balance\n2.Deposit\n3.Withdraw\n4.Exit\n");
+        printf("Enter choice: ");
+        scanf("%d", &choice);
+
+        switch(choice) {
+            case 1:
+                printf("Balance = %.2f\n", balance);
+                break;
+
+            case 2:
+                printf("Enter amount: ");
+                scanf("%f", &amount);
+                balance += amount;
+                break;
+
+            case 3:
+                printf("Enter amount: ");
+                scanf("%f", &amount);
+                if (amount <= balance)
+                    balance -= amount;
+                else
+                    printf("Insufficient balance\n");
+                break;
+
+            case 4:
+                printf("Thank you\n");
+                break;
+
+            default:
+                printf("Invalid choice\n");
+        }
+    } while(choice != 4);
+
+    return 0;
+}
+
+~~~
+
+## Sample Input & Output
+
+## Result
+Thus the program has been executed successfully.
